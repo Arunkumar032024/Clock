@@ -37,15 +37,17 @@ btnNight.onclick = () => {
     document.body.classList.toggle("nightMode");
     btnNight.classList.toggle("hide");
     btnDay.classList.toggle("hide");
-    // digiClockAfter.style.color = "#fff";
     digiClockSpans.forEach(span => {
-        span.classList.toggle("white");
+        span.classList.add("white");
     })
 }
 btnDay.onclick = () => {
     document.body.classList.toggle("nightMode");
     btnNight.classList.toggle("hide");
     btnDay.classList.toggle("hide");
+    digiClockSpans.forEach(span => {
+        span.classList.remove("white");
+    })
 }
 
 
