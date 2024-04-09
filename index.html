@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| Clock |</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- link own css -->
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <!-- header section -->
+    <header>
+        <h1 id="title">Clock</h1>
+        <div>
+            <i class="fa-solid fa-moon" title="Apply Night Mode" id="moon"></i>
+            <i class="fa-solid fa-sun hide" title="Apply Day Mode" id="sun"></i>
+        </div>
+    </header>
+
+
+    <!-- main section -->
+    <main>
+        <div class="container">
+
+            <!-- welcome note -->
+            <div class="welcome-note">
+                <p>Hi! <img src="images/hi.jfif" id="emoji"> users, welcome to my clock web.<br>To use digital clock click on left-side clock.<br>To use analog clock click on right-side clock.</p>
+            </div>
+
+
+            <!-- digital clock section -->
+            <section class="digi-clock">
+                <span id="hour">00</span>
+                <span class="colon">:</span>
+                <span id="min">00</span>
+                <span class="colon">:</span>
+                <span id="sec">00</span>
+                <span id="mode">AM</span>
+            </section>
+
+            <!-- analog clock  -->
+            <section class="ana-clock">
+                <span id="twevle">12</span>
+                <span id="three">03</span>
+                <span id="six">06</span>
+                <span id="nine">09</span>
+            </section>
+        </div>
+        
+    </main>
+
+
+
+    <!-- footer section -->
+    <footer>
+        <i class="fa-solid fa-clock" id="digi-clock" title="Digital Clock"></i>
+        <i class="fa-solid fa-clock" id="ana-clock" title="Analog Clock"></i>
+    </footer>
+    <!-- link own js -->
+    <script src="app.js"></script>
+</body>
+</html>

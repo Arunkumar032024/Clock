@@ -1,0 +1,218 @@
+/* common custom css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #000;
+}
+.active{
+    color: #00f;
+}
+.hide{
+    display: none;
+}
+i{
+    cursor: pointer;
+    font-size: 1.625rem;
+}
+.nightMode{
+    color: #fff;
+    background-color: #000;
+}
+body{
+    color: #000;
+    background-color: #fff;
+}
+/* end common custom css */
+
+
+
+/* header section design */
+header{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+}
+/* end header section design */
+
+
+/* main section design */
+main{
+    width: 100%;
+    height: calc(100vh - 100px);
+    position: relative;
+    margin-top: 50px;
+}
+.container{
+    width: 60%;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* welcome-note style  */
+.welcome-note p{
+    font-size: 2.5rem;
+    font-style: italic;
+
+}
+#emoji{
+    width: 30px;
+}
+/* end welcome-note style  */
+
+/* digital clock style  */
+.digi-clock{
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    
+}
+.digi-clock span{
+    font-size: 5rem;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    
+}
+.digi-clock span#mode{
+    font-size: 2rem;
+}
+.digi-clock span::after{
+    position: absolute;
+    color: #000;
+    font-size: 1rem;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    font-weight: 600;
+}
+.digi-clock span.white::after{
+    color: #fff;
+}
+.digi-clock span#hour::after{
+    content: 'HOURS';
+}
+.digi-clock span#min::after{
+    content: 'MINS';
+}
+.digi-clock span#sec::after{
+    content: 'SEC';
+}
+/* end digital clock style  */
+
+/* analog clock style  */
+.ana-clock{
+    width: 250px;
+    height: 250px;
+    border: 2px solid red;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    display: none;
+}
+.ana-clock::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ana-clock span{
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.ana-clock span#twevle{
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.ana-clock span#three{
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.ana-clock span#six{
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.ana-clock span#nine{
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* end analog clock style  */
+
+/* end main section design */
+
+
+/* footer section design */
+footer{
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+}
+/* end footer section design */
+
+
+
+
+
+
+/* media query for different screen  */
+@media (max-width: 592px) {
+    /* welcome-note style  */
+    .welcome-note p{
+        font-size: 1.125rem;
+    }
+    #emoji{
+        width: 20px;
+    }
+    /* end welcome-note style  */
+}
+@media (max-width: 480px) {
+    .container{
+        width: 100%;
+    }
+    .digi-clock {
+        flex-direction: column;
+    }
+    .digi-clock span.colon{
+        display: none;
+    }
+    .digi-clock span#mode{
+        margin-top: 1rem;
+    }
+
+    
+}
