@@ -24,6 +24,20 @@ function digitalClock(){
 
 function analogClock(){
     title.innerHTML = "Analog Clock";
+    let secAna = 0;
+    let minAna = 0;
+    let hourAna = 0;
+    let currentTimeAna = new Date();
+
+    setInterval(()=>{
+        currentTimeAna = new Date();
+        secAna = currentTimeAna.getSeconds() * 6;
+        minAna = currentTimeAna.getMinutes() * 6;
+        hourAna = currentTimeAna.getHours() * 30 + Math.round(secAna / 12);
+        document.querySelector("#second-hand").style.transform = "rotate(" + secAna + "deg)";
+        document.querySelector("#minute-hand").style.transform = "rotate(" + minAna + "deg)";
+        document.querySelector("#hour-hand").style.transform = "rotate(" + hourAna + "deg)";
+    }, 1000)
 }
 
 
@@ -39,7 +53,11 @@ btnNight.onclick = () => {
     btnDay.classList.toggle("hide");
     digiClockSpans.forEach(span => {
         span.classList.add("white");
-    })
+    });
+    document.querySelectorAll(".hand").forEach(hand =>{
+        hand.style.background = "#fff";
+    });
+    document.querySelector(".point").style.background = "#fff";
 }
 btnDay.onclick = () => {
     document.body.classList.toggle("nightMode");
@@ -47,7 +65,11 @@ btnDay.onclick = () => {
     btnDay.classList.toggle("hide");
     digiClockSpans.forEach(span => {
         span.classList.remove("white");
-    })
+    });
+    document.querySelectorAll(".hand").forEach(hand =>{
+        hand.style.background = "#000";
+    });
+    document.querySelector(".point").style.background = "#000";
 }
 
 
@@ -74,3 +96,6 @@ btnAnaClock.onclick = () => {
     digiClock.style.display = 'none';
     anaClock.style.display = 'block';
 }
+
+
+
